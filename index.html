@@ -860,7 +860,9 @@ there.
 </head>
 
 <body>
-<form id="submit" name="submit">
+<form id="submit" name="submit" method="POST"
+  action="https://script.google.com/macros/s/AKfycbyf9fXyU0BHNAUlYRKuuw2k4zBMjkh7kiH2FSEZNQgZw5vNFY0_eZWn39n43OWU4p9yoA/exec"
+  enctype="multipart/form-data">
 <div class="divTable">
 <div class="divTableBody">
 <div class="divTableRow">
@@ -956,20 +958,8 @@ there.
       </select></div>
 <div class="divTableCell">Additional Notes<br />
           <textarea name="notes" id="notes"></textarea></div>
-		  <input type="submit" name="button" onclick="run(this);return false;" class="button-primary" />
+		  <input type="submit" name="button" class="button-primary" />
 </form>
-	<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
-
-<script>
-  async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycbw7llfNtpQHk3Tigm_ltGlTPq-oSjkdw4a0Or6nCv0Ssq1f6ekkx7OYmyJVUs9PUquCSg/exec"; // Please set your Web Apps URL here.
-
-    const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
-    fetch(url, { method: "POST", body: JSON.stringify(obj) })
-      .then((res) => res.json())
-      .then((res) => console.log(res));
-  }
-</script>
 </div>
 </div>
 </div>
