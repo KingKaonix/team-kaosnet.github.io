@@ -958,6 +958,18 @@ there.
           <textarea name="notes" id="notes"></textarea></div>
 		  <input name="SUBMIT" type="submit" class="button-primary" />
 </form>
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+
+<script>
+  async function run(e) {
+    const url = "https://script.google.com/a/macros/giltner.com/s/AKfycbyIZ3-ejaPJrkr1Zxl1oGrThjpFbtU29GpuaMFBEwcjes8v0CN17meSdzfC7VoVdSmJmA/exec"; // Please set your Web Apps URL here.
+
+    const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
+    fetch(url, { method: "POST", body: JSON.stringify(obj) })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  }
+</script>
 </div>
 </div>
 </div>
