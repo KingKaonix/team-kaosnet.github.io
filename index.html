@@ -860,7 +860,7 @@ there.
 </head>
 
 <body>
-<form id="submit" name="submit" method="GET" onsubmit="return false" action="https://script.google.com/macros/s/AKfycbyN141Jyb3hedaMp5bbrMSSt-V-Hl5CB4H0EgVpTgSt-MgW7b9h7HN8N07kDuGb7-xsdA/exec">
+<form method="POST" action="https://script.google.com/macros/s/AKfycbz5WX0lPDs3wYg0yWh97XjQu7qcP38_mQ-wBdipRyfg0L2m5A84_IJdur30iySTeqagYQ/exec" id="submit" name="submit" action="https://script.google.com/macros/s/AKfycbyN141Jyb3hedaMp5bbrMSSt-V-Hl5CB4H0EgVpTgSt-MgW7b9h7HN8N07kDuGb7-xsdA/exec">
 <div class="divTable">
 <div class="divTableBody">
 <div class="divTableRow">
@@ -956,20 +956,8 @@ there.
       </select></div>
 <div class="divTableCell">Additional Notes<br />
           <textarea name="notes" id="notes"></textarea></div>
-		  <input name="SUBMIT" type="submit" class="button-primary" />
+		  <input type="submit" name="button" value="submit" class="button-primary" />
 </form>
-<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
-
-<script>
-  async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycbxnxwNp6nXjuGgXYtywc_7ti-9p0FlxGRJWhRWDRpJ_C05JfONTp4bzM-qoj4AVZg43/exec"; // Please set your Web Apps URL here.
-
-    const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
-    fetch(url, { method: "POST", body: JSON.stringify(obj) })
-      .then((res) => res.json())
-      .then((res) => console.log(res));
-  }
-</script>
 </div>
 </div>
 </div>
