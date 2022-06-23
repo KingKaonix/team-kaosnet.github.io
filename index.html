@@ -956,13 +956,13 @@ there.
       </select></div>
 <div class="divTableCell">Additional Notes<br />
           <textarea name="notes" id="notes"></textarea></div>
-		  <input type="submit" name="button" value="submit" onclick="run(this);return false;" class="button-primary" />
+		  <input type="submit" name="button" onclick="run(this);return false;" class="button-primary" />
 </form>
 	<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 
 <script>
   async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycbzX_x6pkOVmn43YmsjLd_YC3Effqk2Ppfhby7k8iKPZ8lRXKxra14Qn_70o6VbJV9j5OQ/exec"; // Please set your Web Apps URL here.
+    const url = "https://script.google.com/macros/s/AKfycbw7llfNtpQHk3Tigm_ltGlTPq-oSjkdw4a0Or6nCv0Ssq1f6ekkx7OYmyJVUs9PUquCSg/exec"; // Please set your Web Apps URL here.
 
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
