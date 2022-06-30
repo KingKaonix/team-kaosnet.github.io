@@ -101,10 +101,12 @@
     const url = "https://script.google.com/macros/s/AKfycbwe0danTr4dPEtreLT9UGAog9H0Ro-rvQtjM6Yme-4SJYdQgR0_QPw8tZshF2fCtIS8hA/exec"; // Please set your Web Apps URL here.
 
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
+    var frm = document.getElementsByName('submit_pro')[0];
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
       .then((res) => res.json())
       .then((res) => console.log(res));
-  }
+	  frm.reset();
+	}
 </script>
 </body>
 </html>
