@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="kaosnet.css">
 </head>
 <body>
-<form>
+<form name="pro_submit">
  Who Are You?<br />
     <select id="submitted" name="submitted">
       <option value="" title="Select One">Select One</option>
@@ -111,6 +111,8 @@ async function run(e) {
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
       .then((res) => res.json())
       .then((res) => console.log(res));
+	const form = document.getElementById('pro_submit');
+	form.reset();      
   }
 </script>
 </body>
