@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="kaosnet.css">
 </head>
 <body>
-<form name="pro_submit">
+<form name="submit_pro" id="submit_pro">
  Who Are You?<br />
-    <select id="submitted" name="submitted">
+    <select id="submitted" name="submitted" onSubmit='clearForm()'>
       <option value="" title="Select One">Select One</option>
       <option value="GILPG3LC">LaDonna Charleston</option>
       <option value="GILPG3JO">Jody Clark</option>
@@ -103,17 +103,17 @@
 	  <input class="button-primary" type="submit" name="button" value="submit" onclick="run(this);return false;"/>
 	</form>
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+
 <script>
 async function run(e) {
     const url = "https://script.google.com/macros/s/AKfycbx8NxV4MHkAnkhMZYe6CH7WCnG_0DB4TYXsmqFbhmrkEACqOnn6zYl4_hhoV8amfmyQ/exec"; // Please set your Web Apps URL here.
-
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
+	var frm = document.getElementsByName('submit_pro')[0];
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
       .then((res) => res.json())
       .then((res) => console.log(res));
-	const form = document.getElementById('pro_submit');
-	form.reset();      
-  }
+	  frm.reset();
+	}
 </script>
 </body>
 </html>
