@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 </head>
 <body>
-<form name="submit_pro" id="submit_pro" onsubmit="clearForm()">
+<form name="submit_pro" id="submit_pro">
 <b>Who Are You?</b><br />
     <select id="submitted_by" name="submitted_by" required>
       <option value="" title="Select One">Select One</option>
@@ -103,9 +103,9 @@
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
     var frm = document.getElementsByName('submit_pro')[0];
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
-      .then((res) => res.json())
-      .then((res) => console.log(res));
-	  frm.reset();
+	.then((res) => res.json())
+	.then((res) => console.log(res))
+	frm.reset();
 	}
 </script>
 </body>
