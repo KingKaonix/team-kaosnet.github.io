@@ -1,11 +1,10 @@
 <html>
 <head>
 <link rel="stylesheet" href="kaosnet.css">
-<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 </head>
 <body>
 <form>
-  <p>    Who Are You?<br />
+ Who Are You?<br />
     <select id="submitted" name="submitted">
       <option value="" title="Select One">Select One</option>
       <option value="GILPG3LC">LaDonna Charleston</option>
@@ -101,8 +100,9 @@
     Additional Notes<br />
     <textarea name="notes" id="notes"></textarea>
     <br>
-    <input type="submit" name="button" value="submit" onclick="run(this);return false;"/>
-</form>
+	  <input type="submit" name="button" value="submit" onclick="run(this);return false;"/>
+	</form>
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 <script>
 async function run(e) {
     const url = "https://script.google.com/macros/s/AKfycbx8NxV4MHkAnkhMZYe6CH7WCnG_0DB4TYXsmqFbhmrkEACqOnn6zYl4_hhoV8amfmyQ/exec"; // Please set your Web Apps URL here.
