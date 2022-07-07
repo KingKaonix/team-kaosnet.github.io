@@ -1,114 +1,138 @@
 <html>
 <head>
 <link rel="stylesheet" href="kaosnet.css">
-<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 </head>
 <body>
-<form name="submit_pro" id="submit_pro">
-  <h1>Instructions</h1>
-  <p>In order to properly Audit a member of the Carrier Sales Team, please select any load that is in Covered, Dispatched, At Pickup, Loaded, and At Consignee status, then fill out the info! </p>
-  <p><b>Who Are You?</b><br />
-    <select id="submitted_by" name="submitted_by" required>
-      <option value="" title="Select One">Select One</option>
-      <option value="GILPG3ST" title="Scott Thompson">Scott Thompson</option>
+ <h1>Instructions</h1>
+  <p>In order to properly Audit a member of the Carrier Sales Team, please select any load that is in Covered, Dispatched, At Pickup, Loaded, and At Consignee status, then fill out the info! </p><br>
+  <p><b>Who Are You?</b><br>
+  
+    <select id="submitted_by" name="submitted_by">
+      <option title="Select Your Name">Select Your Name</option>
+      <option value="GILPG3AI" title="Abby Irace">Abby Irace</option>
+      <option value="GILPG3AX" title="Adam Dixon">Adam Dixon</option>
+      <option value="GILPG3AA" title="Albertine Amouzougan">Albertine Amouzougan</option>
+      <option value="GILPG3BS" title="Brad Sanders">Brad Sanders</option>
+      <option value="GILPG3BG" title="Brandy Gines">Brandy Gines</option>
+      <option value="GILPG3CS" title="Chelsey Strickland">Chelsey Strickland</option>
+      <option value="GILPG3DH" title="Dan Hawkins">Dan Hawkins</option>
+      <option value="GILPG3DM" title="David Mayhew">David Mayhew</option>
+      <option value="GILPG3HW" title="Hannah Wilkins">Hannah Wilkins</option>
+      <option value="GILPG3HM" title="Hunter McCluskey">Hunter McCluskey</option>
+      <option value="GILPG3JS" title="Jamie Stevens">Jamie Stevens</option>
+      <option value="GILPTOJM" title="Jessica McLaughlin">Jessica McLaughlin</option>
+      <option value="GILPG3JO" title="Jody Clark">Jody Clark</option>
       <option value="GILPG3JM" title="Joey Mulik">Joey Mulik</option>
-      <option value="GILPG3CP" title="Chris Piet">Chris Piet</option>
-      </select>
+      <option value="GILPG3JH" title="John Kotansky">John Kotansky</option>
+      <option value="GILPG3JN" title="Jon Abrahamson">Jon Abrahamson</option>
+      <option value="GILPG3JK" title="Justin Kaiser">Justin Kaiser</option>
+      <option value="GILPG3LC" title="LaDonna Charleston">LaDonna Charleston</option>
+      <option value="GILPG3MH" title="Mat Hass">Mat Hass</option>
+      <option value="GILPG3MM" title="Michael Mondragon">Michael Mondragon</option>
+      <option value="GILPG3MI" title="Micheal Andrew">Micheal Andrew</option>
+      <option value="GILPG3NB" title="Nathan Betterman">Nathan Betterman</option>
+      <option value="GILPG3SM" title="Samantha Stites">Samantha Stites</option>
+      <option value="GILPG3ST" title="Scott Thompson">Scott Thompson</option>
+      <option value="GILPG3SN" title="Steve Nelson">Steve Nelson</option>
+      <option value="GILPG3TQ" title="Tami Quesnell">Tami Quesnell</option>
+      <option value="GILPG3WP" title="Walt Pierce">Walt Pierce</option>
+      <option value="GILG3ZC" title="Zach Cooley">Zach Cooley</option>
+    </select>
+	<br>
+	<br>
+	 <b>Auditee</b>
     <br>
-    <br>
-    <b>Auditee</b>
-    <br>
-    <select name="auditee" id="auditee">
-      <option value="" title="Select One">Select One</option>
-        <option value="GILPG3AI" title="Abby Irace">Abby Irace</option>
-        <option value="GILPG3CS" title="Chelsey Strickland">Chelsey Strickland</option>
-        <option value="GILPG3HM" title="Hunter McCluskey">Hunter McCluskey</option>
-        <option value="GILPG3JS" title="Jamie Stevens">Jamie Stevenshtml</option>
-        <option value="GILPG3JO" title="Jody Clark">Jody Clark</option>
-        <option value="GILPG3LC" title="LaDonna Charleston">LaDonna Charleston</option>
-        <option value="GILPG3MM" title="Michael Mondragon">Michael Mondragon</option>
-        <option value="GILPG3MI" title="Micheal Andrew">Micheal Andrew</option>
-        <option value="GILPG3TQ" title="Tami Quesnell">Tami Quesnell</option>
-        <option value="GILG3ZC" title="Zach Cooley">Zach Cooley</option>
-                    </select>
-    <br>
-    <br>
-    <b>Audited Load Number</b>
+     <select name="auditee" id="auditee">
+       <option value="" title="Select One">Select One</option>
+       <option value="GILPG3AI" title="Abby Irace">Abby Irace</option>
+       <option value="GILPG3CS" title="Chelsey Strickland">Chelsey Strickland</option>
+       <option value="GILPG3HM" title="Hunter McCluskey">Hunter McCluskey</option>
+       <option value="GILPG3JS" title="Jamie Stevens">Jamie Stevenshtml</option>
+       <option value="GILPG3JO" title="Jody Clark">Jody Clark</option>
+       <option value="GILPG3LC" title="LaDonna Charleston">LaDonna Charleston</option>
+       <option value="GILPG3MM" title="Michael Mondragon">Michael Mondragon</option>
+       <option value="GILPG3MI" title="Micheal Andrew">Micheal Andrew</option>
+       <option value="GILPG3TQ" title="Tami Quesnell">Tami Quesnell</option>
+       <option value="GILG3ZC" title="Zach Cooley">Zach Cooley</option>
+     </select>
+					<br>
+					<br>
+                    <b>Audited Load Number</b>
     <br>
     <input type="text" name="pro">
     <br>
     <br>
-    <b>Removed from Load Boards?</b>
+                    <b>Removed from Load Boards?</b>
     <br>
-    <select name="removed" id="removed">
-      <option>Select One</option>
-      <option value="16.666" title="Yes">Yes</option>
-      <option value="0" title="No">No</option>
+                    <select name="removed" id="removed">
+                                    <option>Select One</option>
+                                    <option value="16.666" title="Yes">Yes</option>
+                                    <option value="0" title="No">No</option>
                     </select>
     <br>
     <br>
-    <b>Dispatch Info Complete?</b>
+                    <b>Dispatch Info Complete?</b>
     <br>
-    <select name="dispatch_info" id="dispatch_info">
-      <option>Select One</option>
-      <option value="16.666" title="Yes">Yes</option>
-      <option value="0" title="No">No</option>
+                    <select name="dispatch_info" id="dispatch_info">
+                                    <option>Select One</option>
+                                    <option value="16.666" title="Yes">Yes</option>
+                                    <option value="0" title="No">No</option>
                     </select>
     <br>
     <br>
-    <b>Signed Rate Con Present?</b>
+                    <b>Signed Rate Con Present?</b>
     <br>
-    <select name="ratecon" id="ratecon">
-      <option>Select One</option>
-      <option value="16.666" title="Yes">Yes</option>
-      <option value="0" title="No">No</option>
+                    <select name="ratecon" id="ratecon">
+                                    <option>Select One</option>
+                                    <option value="16.666" title="Yes">Yes</option>
+                                    <option value="0" title="No">No</option>
                     </select>
     <br>
     <br>
-    <b>Macropoint Assigned and Accepted</b>
+                    <b>Macropoint Assigned and Accepted</b>
     <br>
-    <select name="macropoint" id="macropoint">
-      <option>Select One</option>
-      <option value="16.666" title="Yes">Yes</option>
-      <option value="0" title="No">No</option>
+                    <select name="macropoint" id="macropoint">
+                                    <option>Select One</option>
+                                    <option value="16.666" title="Yes">Yes</option>
+                                    <option value="0" title="No">No</option>
                     </select>
     <br>
     <br>
-    <b>Check Calls Current?</b>
+                    <b>Check Calls Current?</b>
     <br>
-    <select name="check_calls" id="check_calls">
-      <option>Select One</option>
-      <option value="16.666" title="Yes">Yes</option>
-      <option value="0" title="No">No</option>
+                    <select name="check_calls" id="check_calls">
+                                    <option>Select One</option>
+                                    <option value="16.666" title="Yes">Yes</option>
+                                    <option value="0" title="No">No</option>
                     </select>
     <br>
     <br>
-    <b>In/Out Times (including Picks/Stops)?</b>
+                    <b>In/Out Times (including Picks/Stops)?</b>
     <br>
-    <select name="in_out_times" id="in_out_times">
-      <option>Select One</option>
-      <option value="16.666" title="Yes">Yes</option>
-      <option value="0" title="No">No</option>
+                    <select name="in_out_times" id="in_out_times">
+                                    <option>Select One</option>
+                                    <option value="16.666" title="Yes">Yes</option>
+                                    <option value="0" title="No">No</option>
                     </select>
     <br>
     <br>
-    <b>Fearless Feedback</b>
+                    <b>Fearless Feedback</b>
     <br>
-    <textarea id="fearless_feedback" name="fearless_feedback"></textarea>
+                    <textarea id="fearless_feedback" name="fearless_feedback"></textarea>
     <br>
-    <input class="button-primary" type="submit" name="button" value="submit" onClick="run(this);return false;"/>
-      </p>
-</form>
-<script>
-  async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycbwe0danTr4dPEtreLT9UGAog9H0Ro-rvQtjM6Yme-4SJYdQgR0_QPw8tZshF2fCtIS8hA/exec"; // Please set your Web Apps URL here.
+    <input class="button-primary" type="submit" name="button" value="submit" onclick="run(this);return false;"/>
 
+  <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+
+<script>
+async function run(e) {
+    const url = "https://script.google.com/macros/s/AKfycbx6s-eO0ykDAt05QvEi33iHkeCN_tM0JAbW3t4wBOCyCUZ0UoCfBtg9mO7CVeq8FKjo6g/exec"; // Please set your Web Apps URL here.
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
-    var frm = document.getElementsByName('submit_pro')[0];
+	var frm = document.getElementsByName('submit_audit')[0];
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
-	.then((res) => res.json())
-	.then((res) => console.log(res))
-	frm.reset();
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+	  frm.reset();
 	}
 </script>
 </body>
