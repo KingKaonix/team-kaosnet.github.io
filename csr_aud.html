@@ -124,7 +124,7 @@
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 <script>
 async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycbx6s-eO0ykDAt05QvEi33iHkeCN_tM0JAbW3t4wBOCyCUZ0UoCfBtg9mO7CVeq8FKjo6g/exec"; // Please set your Web Apps URL here.
+    const url = "https://script.google.com/a/macros/giltner.com/s/AKfycbzftPtRKssKKYbFOvvVc3NB9JpSC7npOsvTpd5eU1dqYtlz_DhnlwD93SzczZ7liSoL/exec"; // Please set your Web Apps URL here.
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
 	var frm = document.getElementsByName('submit_audit')[0];
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
