@@ -122,6 +122,19 @@ async function run(e) {
       .then((res) => console.log(res));
 	  frm.reset();
 	}
+	function demoNoticeBottomRight() {
+  new jBox('Notice', {
+    content: 'You Did It! Thanks for your Submission!!',
+    color: 'green',
+    
+    // Notices have a fixed position
+    // That's why you need to change the attribute option to move them
+    attributes: {
+      x: 'right',
+      y: 'bottom'
+    }
+  });
+}
 </script>
 </body>
 </html>
