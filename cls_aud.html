@@ -116,7 +116,7 @@
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 <script>
 async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycbwUP20m1XlXcdohmFcm8NVlEJt0s1hMPd-BSN-usm1CpoMj9MIjDWzK4G7_78dWpZFi/exec"; // Please set your Web Apps URL here.
+    const url = "https://script.google.com/macros/s/AKfycbyH1TWX0NNjOQQ0B-Qdb8a7g8sDr-7eP7UDJx_jdfkm1OmsJ6B076lgDTglO5RHsdHoAQ/exec"; // Please set your Web Apps URL here.
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
 	var frm = document.getElementsByName('submit_audit')[0];
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
@@ -124,18 +124,6 @@ async function run(e) {
       .then((res) => console.log(res));
 	  frm.reset();
 	}
-	function demoNoticeBottomRight() {
-  new jBox('Notice', {
-    content: 'You Did It! Thanks for your Submission!!',
-    color: 'green',
-    
-    // Notices have a fixed position
-    // That's why you need to change the attribute option to move them
-    attributes: {
-      x: 'right',
-      y: 'bottom'
-    }
-  });
 }
 </script>
 </body>
