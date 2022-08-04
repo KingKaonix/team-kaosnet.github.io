@@ -127,7 +127,7 @@
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 <script>
 async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycbz0_fDh1nmR4D8JTmHrfTeHwwJ5pEK7cQ8iBgxG_OjuET22kM0mMgxLOSCXIr2aNPe0PQ/exec"; // Please set your Web Apps URL here.
+    const url = "https://script.google.com/macros/s/AKfycbwxvEcvoj5MBozVrM4DxuuTddC30I2roVO2voF57plAnnx2IsYpCA3rirEgMCI5T2YdUA/exec"; // Please set your Web Apps URL here.
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
 	var frm = document.getElementsByName('submit_CSR')[0];
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
