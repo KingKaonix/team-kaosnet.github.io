@@ -6,7 +6,7 @@
 <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
 </head>
 <body>
-<form id="submit_audit" name="submit_audit">
+<form id="submit_CLS" name="submit_CLS">
 <b>Who Are You?</b>
 <br>
   <select id="submitted_by" name="submitted_by">
@@ -116,9 +116,9 @@
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 <script>
 async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycbyH1TWX0NNjOQQ0B-Qdb8a7g8sDr-7eP7UDJx_jdfkm1OmsJ6B076lgDTglO5RHsdHoAQ/exec"; // Please set your Web Apps URL here.
+    const url = "https://script.google.com/macros/s/AKfycbz0_fDh1nmR4D8JTmHrfTeHwwJ5pEK7cQ8iBgxG_OjuET22kM0mMgxLOSCXIr2aNPe0PQ/exec"; // Please set your Web Apps URL here.
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
-	var frm = document.getElementsByName('submit_audit')[0];
+	var frm = document.getElementsByName('submit_CLS')[0];
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
       .then((res) => res.json())
       .then((res) => console.log(res));
