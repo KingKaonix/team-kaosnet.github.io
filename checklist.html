@@ -1,9 +1,9 @@
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
-<form class="form-horizontal">
-<fieldset>
-
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+        </head>
+  <body>
+    <form class="form-horizontal">
 <!-- Form Name -->
 <legend>Checklist</legend>
 
@@ -26,7 +26,8 @@
     </select>
   </div>
 </div>
-
+<br>
+  <br>
 <!-- Multiple Checkboxes -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="checkboxes">Load Build Checklist</label>
@@ -39,55 +40,55 @@
 	</div>
   <div class="checkbox">
     <label for="checkboxes-1">
-      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="TEMP">
+      <input type="checkbox" name="checkboxes" id="TEMP" value="TEMP">
       Temperature (if applicable)
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-2">
-      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="PCS">
+      <input type="checkbox" name="checkboxes" id="PCS" value="PCS">
       Pieces
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-3">
-      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="WGHT">
+      <input type="checkbox" name="checkboxes" id="WGHT" value="WGHT">
       Weight
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-4">
-      <input type="checkbox" name="checkboxes" id="checkboxes-4" value="ACC">
+      <input type="checkbox" name="checkboxes" id="ACC" value="ACC">
       Accessorials (Tarps ETC)
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-5">
-      <input type="checkbox" name="checkboxes" id="checkboxes-5" value="DESC">
+      <input type="checkbox" name="checkboxes" id="DESC" value="DESC">
       Description
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-6">
-      <input type="checkbox" name="checkboxes" id="checkboxes-6" value="CU">
+      <input type="checkbox" name="checkboxes" id="CU" value="CU">
       Customer
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-7">
-      <input type="checkbox" name="checkboxes" id="checkboxes-7" value="P-S">
+      <input type="checkbox" name="checkboxes" id="P-S" value="P-S">
       Number of Picks/Stops
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-8">
-      <input type="checkbox" name="checkboxes" id="checkboxes-8" value="PU">
+      <input type="checkbox" name="checkboxes" id="PU" value="PU">
       Pickup Locations
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-9">
-      <input type="checkbox" name="checkboxes" id="checkboxes-9" value="DEL">
+      <input type="checkbox" name="checkboxes" id="DEL" value="DEL">
       Delivery Locations
     </label>
 	</div>
@@ -105,37 +106,37 @@
 	</div>
   <div class="checkbox">
     <label for="checkboxes-12">
-      <input type="checkbox" name="checkboxes" id="checkboxes-12" value="LINEH">
+      <input type="checkbox" name="checkboxes" id="LINEH" value="LINEH">
       Linehaul Rate
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-13">
-      <input type="checkbox" name="checkboxes" id="checkboxes-13" value="MAX">
+      <input type="checkbox" name="checkboxes" id="MAX" value="MAX">
       Max Rate
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-14">
-      <input type="checkbox" name="checkboxes" id="checkboxes-14" value="PUNU">
+      <input type="checkbox" name="checkboxes" id="PUNU" value="PUNU">
       Pickup Number
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-15">
-      <input type="checkbox" name="checkboxes" id="checkboxes-15" value="DELNU">
+      <input type="checkbox" name="checkboxes" id="DELNU" value="DELNU">
       Delivery Number
     </label>
 	</div>
   <div class="checkbox">
     <label for="checkboxes-16">
-      <input type="checkbox" name="checkboxes" id="checkboxes-16" value="TENDER">
+      <input type="checkbox" name="checkboxes" id="TENDER" value="TENDER">
       Load Tender
     </label>
 	</div>
   </div>
 </div>
-
+<br>
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="button"></label>
@@ -143,6 +144,20 @@
     <button id="button" name="button" class="btn btn-primary">Submit</button>
   </div>
 </div>
-
-</fieldset>
 </form>
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+
+<script>
+  async function run(e) {
+    const url = "https://script.google.com/macros/s/AKfycbyJ5X9-r2ZwMSqyJfAhM8K-m-Ioq-hNOQVp4Xk-uM2cAmRhIox5SxcHHv1HkZa-XDLN/exec"; // Please set your Web Apps URL here.
+
+    const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
+    fetch(url, { method: "POST", body: JSON.stringify(obj) })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  }
+</script>
+  </body>
+</html>
+
+
