@@ -3,7 +3,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
         </head>
   <body>
-    <form class="form-horizontal">
+    <form>
 <!-- Form Name -->
 <legend>Checklist</legend>
 
@@ -11,7 +11,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Hello">Choose AM/CLS</label>
   <div class="col-md-4">
-    <select id="Hello" name="Hello" class="form-control">
+    <select id="REP" name="REP" class="form-control">
       <option value="GILPG3AA">Select One</option>
       <option value="GILPG3BS">Albertine Amouzougan</option>
       <option value="GILPG3SN">Brad Sanders</option>
@@ -145,19 +145,18 @@
   </div>
 </div>
 </form>
-<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+<script> src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+
 <script>
-async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycbwNF22iEm-4FV7tSYC4oxAHPWqGkLtmsv3NVDukdS8Gk9UmyUcfkzq3IOlN6Qwax5cM/exec"; // Please set your Web Apps URL here.
+  async function run(e) {
+    let url = "https://script.google.com/macros/s/AKfycbyJ5X9-r2ZwMSqyJfAhM8K-m-Ioq-hNOQVp4Xk-uM2cAmRhIox5SxcHHv1HkZa-XDLN/exec"; // Please set your Web Apps URL here.
+
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
-	var frm = document.getElementsByName('submit_pro')[0];
-    fetch(url, { method: "POST", body: JSON.stringify(obj) })
+    fetch(url + "?formData=" + JSON.stringify(obj))
       .then((res) => res.json())
       .then((res) => console.log(res));
-	  frm.reset();
-	}
-	  </script>
+  }
+</script>
+
   </body>
 </html>
-
-
