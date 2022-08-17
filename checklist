@@ -1,0 +1,148 @@
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Checklist</legend>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Hello">Choose AM/CLS</label>
+  <div class="col-md-4">
+    <select id="Hello" name="Hello" class="form-control">
+      <option value="GILPG3AA">Select One</option>
+      <option value="GILPG3BS">Albertine Amouzougan</option>
+      <option value="GILPG3SN">Brad Sanders</option>
+      <option value="GILPG3DM">Steve Nelson</option>
+      <option value="GILPG3HW">David Mayhew</option>
+      <option value="GILPG3JN">Hannah Wilkins</option>
+      <option value="GILPG3JK">Jon Abrahamson</option>
+      <option value="GILPG3MH">Justin Kaiser</option>
+      <option value="GILPG3WP">Mat Hass</option>
+      <option value="GILPG3AX">Walt Pierce</option>
+      <option value="">Adam Dixon</option>
+    </select>
+  </div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">Load Build Checklist</label>
+  <div class="col-md-4">
+  <div class="checkbox">
+    <label for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="EQUP">
+      Equipment Type
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="TEMP">
+      Temperature (if applicable)
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-2">
+      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="PCS">
+      Pieces
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-3">
+      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="WGHT">
+      Weight
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-4">
+      <input type="checkbox" name="checkboxes" id="checkboxes-4" value="ACC">
+      Accessorials (Tarps ETC)
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-5">
+      <input type="checkbox" name="checkboxes" id="checkboxes-5" value="DESC">
+      Description
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-6">
+      <input type="checkbox" name="checkboxes" id="checkboxes-6" value="CU">
+      Customer
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-7">
+      <input type="checkbox" name="checkboxes" id="checkboxes-7" value="P-S">
+      Number of Picks/Stops
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-8">
+      <input type="checkbox" name="checkboxes" id="checkboxes-8" value="PU">
+      Pickup Locations
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-9">
+      <input type="checkbox" name="checkboxes" id="checkboxes-9" value="DEL">
+      Delivery Locations
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-10">
+      <input type="checkbox" name="checkboxes" id="checkboxes-10" value="REF">
+      Reference Numbers
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-11">
+      <input type="checkbox" name="checkboxes" id="checkboxes-11" value="CURATE">
+      Customer Rate
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-12">
+      <input type="checkbox" name="checkboxes" id="checkboxes-12" value="LINEH">
+      Linehaul Rate
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-13">
+      <input type="checkbox" name="checkboxes" id="checkboxes-13" value="MAX">
+      Max Rate
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-14">
+      <input type="checkbox" name="checkboxes" id="checkboxes-14" value="PUNU">
+      Pickup Number
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-15">
+      <input type="checkbox" name="checkboxes" id="checkboxes-15" value="DELNU">
+      Delivery Number
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-16">
+      <input type="checkbox" name="checkboxes" id="checkboxes-16" value="TENDER">
+      Load Tender
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="button"></label>
+  <div class="col-md-4">
+    <button id="button" name="button" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
