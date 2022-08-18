@@ -21,13 +21,25 @@
       <option value="GILPG3AX">Walt Pierce</option>
       <option value="">Adam Dixon</option>
     </select>
-<div class="form-group">
-  <label class="col-md-4 control-label" for="button"></label>
-  <div class="col-md-4">
-    <button id="button" name="button" class="btn btn-primary">Submit</button>
-  </div>
+ <input
+    type="submit"
+    name="button"
+    value="submit"
+    onclick="run(this);return false;"
+  />
 </div>
 </form>
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+
+<script>
+  async function run(e) {
+    const url = "https://script.google.com/macros/s/AKfycby9R_421hC_-0eq9NEYsAE9-LG0rEvwek0NIdkjAtMhUk-nMUPZluFCncJ0InBmK5vj/exec"; // Please set your Web Apps URL here.
+
+    const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
+    fetch(url, { method: "POST", body: JSON.stringify(obj) })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  }
+</script>
   </body>
 </html>
