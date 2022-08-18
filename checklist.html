@@ -33,10 +33,10 @@
 
 <script>
   async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycby_wwgIhrBGIZ7wHgwFdMU1-xsKvIBvQi9-oPWOnXcr--HtzSXOl0rT3Y2dHUPxaw0/exec"; // Please set your Web Apps URL here.
+    let url = "https://script.google.com/macros/s/AKfycby_wwgIhrBGIZ7wHgwFdMU1-xsKvIBvQi9-oPWOnXcr--HtzSXOl0rT3Y2dHUPxaw0/exec"; // Please set your Web Apps URL here.
 
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
-    fetch(url, { method: "POST", body: JSON.stringify(obj) })
+    fetch(url + "?formData=" + JSON.stringify(obj))
       .then((res) => res.json())
       .then((res) => console.log(res));
   }
