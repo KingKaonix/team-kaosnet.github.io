@@ -27,7 +27,7 @@
 
 <script>
 async function run(e) {
-    const url = "https://script.google.com/a/macros/giltner.com/s/AKfycbzfPvKAsbfLWt9w2kuUfwUG8GRY9USysXugB9_j-Nlz-sAOYl8xpqMWYGfrjiX7yy0kgw/exec"; // Please set your Web Apps URL here.
+    const url = "https://script.google.com/macros/s/AKfycbyes7bVe-jb0_Xt7jdn2dPlTdb9uLe6ilsB13eozhFQJ3pvT94urmauYfwPMc2AQyCdhg/exec"; // Please set your Web Apps URL here.
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
 	var frm = document.getElementsByName('checklist')[0];
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
