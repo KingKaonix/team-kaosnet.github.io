@@ -3,7 +3,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
         </head>
   <body>
-    <form>
+    <form name="checklist" id="checklist">
 <legend>Checklist</legend>
 <div class="form-group">
   <label class="col-md-4 control-label" for="Hello">Choose AM/CLS</label>
@@ -21,25 +21,20 @@
       <option value="GILPG3AX">Walt Pierce</option>
       <option value="">Adam Dixon</option>
     </select>
- <input
-    type="submit"
-    name="button"
-    value="submit"
-    onclick="run(this);return false;"
-  />
+<input class="button-primary" type="submit" name="button" value="submit" onclick="run(this);return false;"/>
 </div>
 </form>
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 
 <script>
-  async function run(e) {
-    let url = "https://script.google.com/macros/s/AKfycby_wwgIhrBGIZ7wHgwFdMU1-xsKvIBvQi9-oPWOnXcr--HtzSXOl0rT3Y2dHUPxaw0/exec"; // Please set your Web Apps URL here.
-
+async function run(e) {
+    const url = "https://script.google.com/macros/s/AKfycbxznB8-QbRIV-dzvzfjLbUgeIF4yIlcH3y3RnSK3TTTO5ZrBcDevE5xI160Vjga958A/exec"; // Please set your Web Apps URL here.
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
-    fetch(url + "?formData=" + JSON.stringify(obj))
+	var frm = document.getElementsByName('checklist')[0];
+    fetch(url, { method: "POST", body: JSON.stringify(obj) })
       .then((res) => res.json())
       .then((res) => console.log(res));
-  }
-</script>
+	  frm.reset();
+}
   </body>
 </html>
