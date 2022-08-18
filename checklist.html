@@ -3,7 +3,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
         </head>
   <body>
-    <form data-stein-url="https://api.steinhq.com/v1/storages/62fe3f9dbc148508ba8826b6/DATA">
+    <form>
 <legend>Checklist</legend>
 <div class="form-group">
   <label class="col-md-4 control-label" for="Hello">Choose AM/CLS</label>
@@ -28,6 +28,17 @@
   </div>
 </div>
 </form>
-	<script src="https://unpkg.com/stein-expedite@0.1.0/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+
+<script>
+  async function run(e) {
+    let url = "https://script.google.com/macros/s/AKfycbwYu05cIjmZSrF2KnEu04iOkfaadIWvDazMRmL80vNy_sBCOL_2JeJKfU_VtdhC_zPv/exec"; // Please set your Web Apps URL here.
+
+    const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
+    fetch(url + "?formData=" + JSON.stringify(obj))
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  }
+</script>	
   </body>
 </html>
