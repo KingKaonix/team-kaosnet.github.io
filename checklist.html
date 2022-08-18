@@ -33,7 +33,7 @@
 
 <script>
   async function run(e) {
-    const url = "https://script.google.com/macros/s/AKfycby9R_421hC_-0eq9NEYsAE9-LG0rEvwek0NIdkjAtMhUk-nMUPZluFCncJ0InBmK5vj/exec"; // Please set your Web Apps URL here.
+    const url = "https://script.google.com/macros/s/AKfycby_wwgIhrBGIZ7wHgwFdMU1-xsKvIBvQi9-oPWOnXcr--HtzSXOl0rT3Y2dHUPxaw0/exec"; // Please set your Web Apps URL here.
 
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
