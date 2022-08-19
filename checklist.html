@@ -3,7 +3,7 @@
 		<link rel="stylesheet" href="kaosnet.css">
 	</head>
 	<body>
-      <form>
+<form>
   <select id="who">
     <option title="Who Are You?">Who Are You?</option>
 	<option value="bgines@giltner.com" title="Brandy Gines">Brandy Gines</option>
@@ -84,24 +84,35 @@
 	<option value="mhass@giltner.com" title="WR Baxter Wholesale Nursery">WR Baxter Wholesale Nursery</option>
 	<option value="adixon@giltner.com" title="Wada Farms">Wada Farms</option>
 </select><br>
-          <p><b>Select ONLY THE MISSING ITEMS NEEDED TO BUILD THE LOAD!!</b></p>
-    <td><input type="checkbox" name="EQP" value="Equipment" />Equipment</td><br>
-    <td><input type="checkbox" name="TEMP" value="Temperature">Temperature</td><br>
-    <td><input type="checkbox" name="PCS" value="Pieces">Pieces</td><br>
-    <td><input type="checkbox" name="WGHT" value="Weight">Weight</td><br>
-    <td><input type="checkbox" name="ACC" value="Accessorials">Accessorials</td><br>
-    <td><input type="checkbox" name="DESC" value="Description">Description</td><br>
-    <td><input type="checkbox" name="P-S" value="Picks" />Picks</td><br>
-    <td><input type="checkbox" name="PU" value="Pick Location" />Pick Loc.</td><br>
-    <td><input type="checkbox" name="DEL" value="Del Location" />Del Location.</td><br>
-    <td><input type="checkbox" name="REF" value="Reference #'s" />Reference #'s</td><br>
-    <td><input type="checkbox" name="CURATE" value="Customer Rate">Cust. Rate</td><br>
-    <td><input type="checkbox" name="LINEH" value="Linehaul">Linehaul Rate</td><br>
-    <td><input type="checkbox" name="MAX" value="Max Rate">Max Rate</td><br>
-    <td><input type="checkbox" name="PUNU" value="Pickup Number">Pickup Number</td><br>
-    <td><input type="checkbox" name="DELNU" value="Delivery Number">Del Number</td><br>
-      <td><input type="checkbox" name="TENDER" value="Load Tender">Load Tender</td><br>
+  <p><b>Select ONLY THE MISSING ITEMS NEEDED TO BUILD THE LOAD!!</b></p>
+  <table id="myTable" width="100%" border="0" cellpadding="5" cellspacing="1">
+  <tbody align="left">
+  <tr>
+    <td><input type="checkbox" name="EQP" value="Equipment" />Equipment</td>
+    <td><input type="checkbox" name="TEMP" value="Temperature">Temperature</td>
+    <td><input type="checkbox" name="PCS" value="Pieces">Pieces</td>
+    <td><input type="checkbox" name="WGHT" value="Weight">Weight</td>
+    <td><input type="checkbox" name="ACC" value="Accessorials">Accessorials</td>
+  </tr>
+
+  <tr>
+    <td><input type="checkbox" name="DESC" value="Description">Description</td>
+    <td><input type="checkbox" name="P-S" value="Picks" />Picks</td>
+    <td><input type="checkbox" name="PU" value="Pick Location" />Pick Loc.</td>
+    <td><input type="checkbox" name="DEL" value="Del Location" />Del Location.</td>
+    <td><input type="checkbox" name="REF" value="Reference #'s" />Reference #'s</td>
+  </tr>
+    <td><input type="checkbox" name="CURATE" value="Customer Rate">Cust. Rate</td>
+    <td><input type="checkbox" name="LINEH" value="Linehaul">Linehaul Rate</td>
+    <td><input type="checkbox" name="MAX" value="Max Rate">Max Rate</td>
+    <td><input type="checkbox" name="PUNU" value="Pickup Number">Pickup Number</td>
+    <td><input type="checkbox" name="DELNU" value="Delivery Number">Del Number</td>
+    <tr>
+      <td><input type="checkbox" name="TENDER" value="Load Tender">Load Tender</td>
       <td><input class="button-primary"  type="submit" name="button" value="submit" onclick="run(this);return false;"></td>
+    </tr>
+  </tbody>
+</table>
 </form>
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
 <script>
