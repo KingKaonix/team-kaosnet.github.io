@@ -85,7 +85,7 @@
 	<option value="adixon@giltner.com" title="Wada Farms">Wada Farms</option>
 </select><br>
   <p><b>Select ONLY THE MISSING ITEMS NEEDED TO BUILD THE LOAD!!</b></p>
-  <table id="myTable" width="100%" border="0" cellpadding="10" cellspacing="1">
+  <table id="myTable" width="100%" border="0" cellpadding="5" cellspacing="1">
   <tbody align="left">
   <tr>
     <td><input type="checkbox" name="EQP" value="Equipment" />Equipment</td>
@@ -114,13 +114,10 @@
   </tbody>
 </table>
 </form>
-
 <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
-
 <script>
   async function run(e) {
     const url = "https://script.google.com/macros/s/AKfycbyVuqTApjUPHvG43ol1Hd0P5e1SKNVWaMP5lAls7J94jH8mporvgruLvcLaufKu1o04/exec"; // Please set your Web Apps URL here.
-
     const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
     fetch(url, { method: "POST", body: JSON.stringify(obj) })
       .then((res) => res.json())
