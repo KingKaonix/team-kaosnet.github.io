@@ -6,6 +6,7 @@
 
 	</head>
 	<body>
+		<form>
 	<table width="100%" border="0" cellspacing="0" cellpadding="10">
 	  <tbody>
 	    <tr>
@@ -51,17 +52,30 @@
         </tr>
 	    <tr>
 	      <td align="left">Employee Start Date:
-          <input type="text" id="start" placeholder="Click to Select Date"/> <input class="button-primary" type="button" name="button" id="button" value="Submit"></td>
+          <input type="text" id="start" placeholder="Click to Select Date"/> <input type="button" name="button" id="button" value="Submit"></td>
 	      <td align="left">&nbsp;</td>
 	      <td>&nbsp;</td>
         </tr>
       </tbody>
     </table>
+		</form>
 		<script>
     window.addEventListener("load", () => {
       picker.attach({ target: "start" });
     });
-    </script>
+		</script>
+    <script src="https://cdn.jsdelivr.net/gh/tanaikech/HtmlFormObjectParserForGoogleAppsScript_js/htmlFormObjectParserForGoogleAppsScript_js.min.js"></script>
+
+<script>
+  async function run(e) {
+    const url = "https://script.google.com/macros/s/###/exec"; // Please set your Web Apps URL here.
+
+    const obj = await ParseFormObjectForGAS(e.parentNode, null, null, true);
+    fetch(url, { method: "POST", body: JSON.stringify(obj) })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  }
+</script>
 
 	</body>
 </html>
