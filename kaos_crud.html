@@ -58,8 +58,8 @@
       document.getElementById("loader").style.visibility = "visible";
       $('#mySpinner').addClass('spinner');
 
-      var id1 = $("#id").val();
-      var name = $("#name").val();
+      var id1 = $("#pro").val();
+      var name = $("#complete").val();
 
 
       var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
@@ -77,8 +77,8 @@
     function update_value() {
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
-      var id1 = $("#id").val();
-      var name = $("#name").val();
+      var id1 = $("#pro").val();
+      var name = $("#complete").val();
       var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
@@ -92,8 +92,8 @@
       $("#re").css("visibility", "hidden");
       document.getElementById("loader").style.visibility = "visible";
       $('#mySpinner').addClass('spinner');
-      var id1 = $("#id").val();
-      var name = $("#name").val();
+      var id1 = $("#pro").val();
+      var name = $("#complete").val();
       var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=delete";
       var request = jQuery.ajax({
         crossDomain: true,
@@ -169,6 +169,43 @@
         <form>
           Pro Number
           <input type="text" name="pro" id="pro">
+          <input type="text" name="revenue" id="revenue">
+          <input type="text" name="pro" id="pro">
+          <select id="complete" name="complete">
+	<option value="GILPG3AA" title="GILPG3AA">GILPG3AA</option>
+	<option value="GILPG3AI" title="GILPG3AI">GILPG3AI</option>
+	<option value="GILPG3AT" title="GILPG3AT">GILPG3AT</option>
+	<option value="GILPG3BG" title="GILPG3BG">GILPG3BG</option>
+	<option value="GILPG3BS" title="GILPG3BS">GILPG3BS</option>
+	<option value="GILPG3CS" title="GILPG3CS">GILPG3CS</option>
+	<option value="GILPG3DA" title="GILPG3DA">GILPG3DA</option>
+	<option value="GILPG3DG" title="GILPG3DG">GILPG3DG</option>
+	<option value="GILPG3DH" title="GILPG3DH">GILPG3DH</option>
+	<option value="GILPG3DM" title="GILPG3DM">GILPG3DM</option>
+	<option value="GILPG3DR" title="GILPG3DR">GILPG3DR</option>
+	<option value="GILPG3HM" title="GILPG3HM">GILPG3HM</option>
+	<option value="GILPG3HW" title="GILPG3HW">GILPG3HW</option>
+	<option value="GILPG3JH" title="GILPG3JH">GILPG3JH</option>
+	<option value="GILPG3JK" title="GILPG3JK">GILPG3JK</option>
+	<option value="GILPG3JM" title="GILPG3JM">GILPG3JM</option>
+	<option value="GILPG3JN" title="GILPG3JN">GILPG3JN</option>
+	<option value="GILPG3JO" title="GILPG3JO">GILPG3JO</option>
+	<option value="GILPG3KH" title="GILPG3KH">GILPG3KH</option>
+	<option value="GILPG3LC" title="GILPG3LC">GILPG3LC</option>
+	<option value="GILPG3MH" title="GILPG3MH">GILPG3MH</option>
+	<option value="GILPG3MI" title="GILPG3MI">GILPG3MI</option>
+	<option value="GILPG3MM" title="GILPG3MM">GILPG3MM</option>
+	<option value="GILPG3NB" title="GILPG3NB">GILPG3NB</option>
+	<option value="GILPG3OS" title="GILPG3OS">GILPG3OS</option>
+	<option value="GILPG3SN" title="GILPG3SN">GILPG3SN</option>
+	<option value="GILPG3SS" title="GILPG3SS">GILPG3SS</option>
+	<option value="GILPG3ST" title="GILPG3ST">GILPG3ST</option>
+	<option value="GILPG3SV" title="GILPG3SV">GILPG3SV</option>
+	<option value="GILPG3TQ" title="GILPG3TQ">GILPG3TQ</option>
+	<option value="GILPG3WP" title="GILPG3WP">GILPG3WP</option>
+	<option value="GILPG3ZC" title="GILPG3ZC">GILPG3ZC</option>
+	<option value="GILPTOJM" title="GILPTOJM">GILPTOJM</option>
+</select>
         </form>
 
         <div id="loader"></div>
