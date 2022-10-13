@@ -62,7 +62,7 @@
       var name = $("#complete").val();
 
 
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
+      var url = script_url + "?callback=ctrlq&notes=" + name + "&pro=" + id1 + "&action=insert";
 
 
       var request = jQuery.ajax({
@@ -79,7 +79,7 @@
       document.getElementById("loader").style.visibility = "visible";
       var id1 = $("#pro").val();
       var name = $("#complete").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=update";
+      var url = script_url + "?callback=ctrlq&notes=" + name + "&pro=" + id1 + "&action=update";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
@@ -94,7 +94,7 @@
       $('#mySpinner').addClass('spinner');
       var id1 = $("#pro").val();
       var name = $("#complete").val();
-      var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=delete";
+      var url = script_url + "?callback=ctrlq&notes=" + name + "&pro=" + id1 + "&action=delete";
       var request = jQuery.ajax({
         crossDomain: true,
         url: url,
