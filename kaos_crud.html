@@ -50,7 +50,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script>
-    var script_url = "https://script.google.com/macros/s/AKfycbz6FOImZmeMtt44kvplNji0ChNa1IJn11O8cde1rLOyct-avGurYwNa_KUIy8eDXbD8/exec";
+    var script_url = "https://script.google.com/macros/s/AKfycbz4z8q84ChuyvXW2LChzwyUNGmyjynTljevfux5sPjCurX4l_0WeQF801eeox5tdGpo/exec";
 
     // Make an AJAX call to Google Script
     function insert_value() {
@@ -125,45 +125,9 @@
         var row = header.insertRow(0);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
-        var cell5 = row.insertCell(4);
-        var cell6 = row.insertCell(5);
-        var cell7 = row.insertCell(6);
-        var cell8 = row.insertCell(7);
-        var cell9 = row.insertCell(8);
-        var cell10 = row.insertCell(9);
-        var cell11 = row.insertCell(10);
-        var cell12 = row.insertCell(11);
-        var cell13 = row.insertCell(12);
-        var cell14 = row.insertCell(13);
-        var cell15 = row.insertCell(14);
-        var cell16 = row.insertCell(15);
-        var cell17 = row.insertCell(16);
-        var cell18 = row.insertCell(17);
-        var cell19 = row.insertCell(18);
-        var cell20 = row.insertCell(19);
 
-        cell1.innerHTML = "<b>Email Address</b>";
-        cell2.innerHTML = "<b>Client Sales Rep</b>";
-        cell3.innerHTML = "<b>Account Manager</b>";
-        cell4.innerHTML = "<b>Ops Assistant</b>";
-        cell5.innerHTML = "<b>Customer Name</b>";
-        cell6.innerHTML = "<b>Primary Contact Name</b>";
-        cell7.innerHTML = "<b>Primary Contact Email</b>";
-        cell8.innerHTML = "<b>Secondary Contact Name</b>";
-        cell9.innerHTML = "<b>Secondary Contact Phone</b>";
-        cell10.innerHTML = "<b>Secondary Contact Email</b>";
-        cell11.innerHTML = "<b>After Hours Name</b>";
-        cell12.innerHTML = "<b>After Hours Phone</b>";
-        cell13.innerHTML = "<b>After Hours Email</b>";
-        cell14.innerHTML = "<b>TMS Link</b>";
-        cell15.innerHTML = "<b>TMS Username</b>";
-        cell16.innerHTML = "<b>Accepting/Pricing Notes</b>";
-        cell17.innerHTML = "<b>TMS Password</b>";
-        cell18.innerHTML = "<b>Who to Contact</b>";
-        cell19.innerHTML = "<b></b>";
-        cell20.innerHTML = "<b>Client Sales Rep</b>";
+        cell1.innerHTML = "<b>ID</b>";
+        cell2.innerHTML = "<b>Name</b>";
 
         // ADD JSON DATA TO THE TABLE AS ROWS.
         for (var i = 0; i < json.records.length; i++) {
@@ -193,10 +157,8 @@
         <p>Be careful with the parameters you are sending, it should match the parameters that are recived in google app script.</p>
 
         <form>
-          ID
-          <input type="text" name="id" id="id">
-          Name
-          <input type="text" name="name" id="name">
+          Pro Number
+          <input type="text" name="pro" id="pro">
         </form>
 
         <div id="loader"></div>
@@ -207,7 +169,7 @@
         <input type="button" onclick="read_value()" value="Read" />
         <input type="button" onclick="update_value()" value="Update" />
         <input type="button" onclick="delete_value()" value="Delete" />
-        <a href="https://docs.google.com/spreadsheets/d/1Cdt3zWjVfRZpco2e8jg7Q2krJx_xj0UEKtDlIkkZKGg/edit#gid=1965867122"
+        <a href="YOUR_SPREADSHEET_LINK"
           target="_blank">Click here to open Spread Sheet </a>
         <div id="showData"></div>
   </div>
