@@ -19,7 +19,9 @@
 			layout:"fitColumns",
 			columns:[
     			{title:"Pro Number", field:"Pro Number", headerFilter:"input"},
-				{title:"Revenue", field:"Revenue"},
+				{title:"Revenue", field:"Revenue", formatter:"money", formatterParams:{
+					symbol:"$",
+				}},
     			{title:"Reason for Move", field:"Reason for Move"},
 				{title:"Notes", field:"Notes"},
 				{title:"Complete - Moved To", field:"Complete - Moved To"},
