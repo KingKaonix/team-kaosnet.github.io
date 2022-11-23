@@ -11,31 +11,12 @@
 <title>Edit Employee</title>
 	</head>
 <body>
-	<div data-stein-url="https://api.steinhq.com/v1/storages/637e567ceced9b09e9a6a0e5/CS-UI" data-stein-limit="1"><table width="100%" border="0" cellspacing="0" cellpadding="10">
-  <tbody>
-    <tr bgcolor="#4084D4">
-      <th scope="col">Team Volume</th>
-      <th scope="col">Team GP</th>
-      <th scope="col">Team Inbound Calls</th>
-      <th scope="col">Team Outbound Calls</th>
-      <th scope="col">Team Total Calls</th>
-    </tr>
-    <tr align="center">
-      <td align="right">{{Total Volume}}</td>
-      <td>{{Total GP}}</td>
-      <td>{{Total Inbound}}</td>
-      <td>{{Total Outbound}}</td>
-      <td>{{Total Combined}}</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-	
 <div class="striped" id="carrier_sales"></div>
 <script>
 	var table = new Tabulator("#carrier_sales", {
 		ajaxURL:"https://api.steinhq.com/v1/storages/637e567ceced9b09e9a6a0e5/CS-UI",
-			layout:"fitColumns",
+			layout:"fitData",
+			height:"100%",			
 			columns:[
     			{title:"Carrier Rep", field:"CSR Output"},
 				{title:"Volume", field:"CSR Volume"}, 
