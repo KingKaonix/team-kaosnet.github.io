@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+<link href="https://unpkg.com/tabulator-tables@5.4.2/dist/css/tabulator_modern.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.4.2/dist/js/tabulator.min.js"></script>
+	<script src="https://unpkg.com/stein-js-client"></script>
+<meta charset="utf-8">
+<title>Find Your People</title>
+	</head>
+<body>
+<div class="striped" id="carrier_sales"></div>
+<script>
+	var table = new Tabulator("#carrier_sales", {
+		ajaxURL:"https://api.steinhq.com/v1/storages/61f7edadc582292380c7e8de/Phone",
+			layout:"fitColumns",
+			height:"100%",			
+			columns:[
+    			{title:"Name", field:"Name", headerFilter:"input"},
+				{title:"Role", field:"Role", headerFilter:"input"},
+				{title:"POD", field:"POD", headerFilter:"input"},
+				{title:"Desk", field:"Desk", headerFilter:"input"},
+    			{title:"Ext", field:"EXT", headerFilter:"input"},
+				{title:"Personal", field:"Personal", headerFilter:"input"},
+				{title:"AljexID", field:"Aljex ID", headerFilter:"input"},
+				{title:"Sales ID", field:"Sales ID", headerFilter:"input"},
+				{title:"Location", field:"Location", headerFilter:"input"},
+			],
+	});
+	</script>
+	<script src="https://unpkg.com/stein-expedite@0.1.0/dist/index.js"></script>
+</body>
+</html>
