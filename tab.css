@@ -8,7 +8,7 @@
 {
 	position: relative;
 	border: 1px solid #999;
-	background-color: #888;
+	background-color: #ffffff;
 	font-size: 10px;
 	text-align: left;
 	overflow: hidden;
@@ -134,7 +134,7 @@
 	width: 100%;
 	border: 1px solid #999;
 	padding: 1px;
-	background: #fff
+	background: #ffffff
 }
 
 .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title .tabulator-header-popup-button+.tabulator-title-editor
@@ -203,7 +203,7 @@
 .tabulator .tabulator-header .tabulator-col.tabulator-sortable.tabulator-col-sorter-element:hover
 {
 	cursor: pointer;
-	background-color: #cdcdcd
+	background-color: #ffffff
 }
 
 .tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort=none] .tabulator-col-content .tabulator-col-sorter
@@ -314,14 +314,14 @@
 {
 	box-sizing: border-box;
 	min-width: 600%;
-	background: #f3f3f3!important;
+	background: #ffffff!important;
 	border-top: 1px solid #aaa;
 	border-bottom: 1px solid #aaa
 }
 
 .tabulator .tabulator-header .tabulator-calcs-holder .tabulator-row
 {
-	background: #f3f3f3!important
+	background: #ffffff!important
 }
 
 .tabulator .tabulator-header .tabulator-calcs-holder .tabulator-row .tabulator-col-resize-handle
@@ -382,7 +382,7 @@
 {
 	position: relative;
 	display: inline-block;
-	background-color: #fff;
+	background-color: #ffffff;
 	white-space: nowrap;
 	overflow: visible;
 	color: #333
@@ -391,7 +391,7 @@
 .tabulator .tabulator-tableholder .tabulator-table .tabulator-row.tabulator-calcs
 {
 	font-weight: 700;
-	background: #e2e2e2!important
+	background: #ffffff!important
 }
 
 .tabulator .tabulator-tableholder .tabulator-table .tabulator-row.tabulator-calcs.tabulator-calcs-top
@@ -407,7 +407,7 @@
 .tabulator .tabulator-footer
 {
 	border-top: 1px solid #999;
-	background-color: #e6e6e6;
+	background-color: #fffffff;
 	color: #555;
 	font-weight: 700;
 	white-space: nowrap;
@@ -437,7 +437,7 @@
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
-	background: #f3f3f3!important;
+	background: #ffffff!important;
 	border-bottom: 1px solid #aaa;
 	border-top: 1px solid #aaa;
 	overflow: hidden
@@ -446,7 +446,7 @@
 .tabulator .tabulator-footer .tabulator-calcs-holder .tabulator-row
 {
 	display: inline-block;
-	background: #f3f3f3!important
+	background: #fffffff!important
 }
 
 .tabulator .tabulator-footer .tabulator-calcs-holder .tabulator-row .tabulator-col-resize-handle
@@ -563,7 +563,7 @@
 	margin: 0 auto;
 	padding: 10px 20px;
 	border-radius: 10px;
-	background: #fff;
+	background: #ffffff;
 	font-weight: 700;
 	font-size: 16px
 }
@@ -585,7 +585,7 @@
 	position: relative;
 	box-sizing: border-box;
 	min-height: 22px;
-	background-color: #fff
+	background-color: #ffffff
 }
 
 .tabulator-row.tabulator-row-even
