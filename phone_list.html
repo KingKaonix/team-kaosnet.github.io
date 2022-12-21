@@ -17,6 +17,13 @@
 		ajaxURL:"https://api.steinhq.com/v1/storages/61f7edadc582292380c7e8de/Phone",
 			layout:"fitData",
 			height:"100%",
+			persistence:{
+				sort:true,
+				filter:true,
+				group:true,
+				page:true,
+				columns:true,
+			},
 			groupBy:"Role",
 			columns:[
     			{title:"Name", field:"Name", headerFilter:"input"},
