@@ -16,7 +16,8 @@
 	var table = new Tabulator("#carrier_sales", {
 		ajaxURL:"https://api.steinhq.com/v1/storages/61f7edadc582292380c7e8de/Phone",
 			layout:"fitData",
-			height:"100%",			
+			height:"100%",
+			groupBy:"Role",
 			columns:[
     			{title:"Name", field:"Name", headerFilter:"input"},
 				{title:"Role", field:"Role", headerFilter:"input"},
